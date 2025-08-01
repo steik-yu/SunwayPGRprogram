@@ -1,1 +1,1 @@
-# SunwayPG-statistical-tests-with-R-program
+# Sunway post-graduate R program
