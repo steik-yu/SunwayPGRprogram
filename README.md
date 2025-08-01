@@ -2,18 +2,17 @@
 This page aims to provide read-to-use R program for students who are performing basic biostatistics in R with figures. 
 
 ## Statistical Tests
-*0. Assumption checking tests: Shapiro-Wilk test / Levene's test*
+0. *Assumption checking tests: Shapiro-Wilk test / Levene's test*
 1. One sample t-test / One sample Wilcoxon rank sum test
 2. Independent two sample t-test / Mann-Whitney U test
 3. Paired samples t-test / Paired sample Wilcoxon rank sum test
 4. One-way ANOVA with post-hoc test / Kruskal-Wallis rank sum test
 5. Two-way ANOVA with post-hoc test / Aligned Rank Transform test
 6. Chi-Square Goodness-of-Fit Test
-7. Pearson correlation coefficient
-8. Spearman rank correlation coefficient
-9. Simple linear regression
-10. Multiple linear regression
-11. Logistic regression
+7. Pearson correlation coefficient / Spearman rank correlation coefficient
+8. Simple linear regression
+9. Multiple linear regression
+10. Logistic regression
 
 ## R graphs or formula for the moment
 ### Antioxidant assays (DPPH/ABTS)
