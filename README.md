@@ -4,7 +4,7 @@ This page aims to provide read-to-use R program for students who are performing 
 ## Data input format
 To make your life easier moving forward, format your data like the example below. It might not be as clean as the scientific table with all the redundant information, but R reads it better this way (better if replace space with _). (P.S. Yes, of course you can transform the data yourself in R, but introducing that here would make things more complicated, so)
 
-Example Data 1. Colorectal Cancer Dataset.
+Example Data 1. Colorectal Cancer Raw Dataset.
 | Patient_ID | Country    | Age    | Gender    | Cancer_Stage    | Tumor_Size_mm    | Family_History    | Smoking_History    | Alcohol_Consumption    | ...    |
 | :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | UK   | 77   | M   | Localized   | 69   | No   | No   | Yes   | ...   |
@@ -14,7 +14,7 @@ Example Data 1. Colorectal Cancer Dataset.
 | 5 | UK   | 66   | M   | Localized   | 34   | Yes   | No   | No   | ...   |
 | 6 | France   | 69   | M   | Regional   | 71   | Yes   | No   | Yes   | ...   |
 
-Example Data 2. Cell Viability Absorbance Reading Dataset. (MelastomaW: Melastoma water extract)
+Example Data 2. Cell Viability Absorbance Reading Raw Dataset. (MelastomaW: Melastoma water extract)
 | Treatment | Concentration | Absorbance |
 | :-----: | :---: | :---: |
 | Untreated | 0   | 6271   |
