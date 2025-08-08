@@ -8,15 +8,10 @@ Example Data 1. Colorectal Cancer Dataset
 | Patient_ID | Country    | Age    | Gender    | Cancer_Stage    | Tumor_Size_mm    | Family_History    | Smoking_History    | Alcohol_Consumption    |
 | :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | UK   | 77   | M   | Localized   | 69   | No   | No   | Yes   |
-| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 2 | Japan   | 59   | M   | Localized   | 33   | No   | Yes   | No   |
-| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 3 | USA   | 66   | F   | Regional   | 17   | No   | No   | No   |
-| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 4 | Japan   | 83   | F   | Metastatic   | 14   | No   | Yes   | No   |
-| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 5 | UK   | 66   | M   | Localized   | 34   | Yes   | No   | No   |
-| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 6 | France   | 69   | M   | Regional   | 71   | Yes   | No   | Yes   |
 
 Example Data 2. 
