@@ -3,6 +3,7 @@ This page aims to provide read-to-use R program for students who are performing 
 
 ## Data input format
 To make our life easier onwards, make your data looking great like the format below. It is not as clean as your scientific table with all those redundant information, but R reads better this way. (ps: yes, ofc you can transform the data yourself in R, but it will become complicated here if we introduce that here, so)
+
 Example Data 1. Colorectal Cancer Dataset
 | Attempt | #1    | #2    |
 | :-----: | :---: | :---: |
