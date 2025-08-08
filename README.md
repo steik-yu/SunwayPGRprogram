@@ -4,7 +4,7 @@ This page aims to provide read-to-use R program for students who are performing 
 ## Data input format
 To make your life easier moving forward, format your data like the example below. It might not be as clean as the scientific table with all the redundant information, but R reads it better this way (better if replace space with _). (P.S. Yes, of course you can transform the data yourself in R, but introducing that here would make things more complicated, so)
 
-Example Data 1. Colorectal Cancer Raw Dataset.
+Example Data 1. Colorectal Cancer Patient Raw Dataset.
 | Patient_ID | Country    | Age    | Gender    | Cancer_Stage    | Tumor_Size_mm    | Family_History    | Smoking_History    | Alcohol_Consumption    | ...    |
 | :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | UK   | 77   | M   | Localized   | 69   | No   | No   | Yes   | ...   |
@@ -29,7 +29,7 @@ Example Data 2. Cell Viability Absorbance Reading Raw Dataset. (MelastomaW: Mela
 | ... | ...   | ...   |
 
 ## Statistical Tests
-0. *Assumption checking tests: Shapiro-Wilk test / Levene's test*
+0. *Data input + Assumption checking tests: Shapiro-Wilk test / Levene's test*
 1. One sample t-test / One sample Wilcoxon rank sum test
 2. Independent two sample t-test / Mann-Whitney U test
 3. Paired samples t-test / Paired sample Wilcoxon rank sum test
