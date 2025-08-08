@@ -4,17 +4,29 @@ This page aims to provide read-to-use R program for students who are performing 
 ## Data input format
 To make your life easier moving forward, format your data like the example below. It might not be as clean as the scientific table with all the redundant information, but R reads it better this way (better if replace space with _). (P.S. Yes, of course you can transform the data yourself in R, but introducing that here would make things more complicated, so)
 
-Example Data 1. Colorectal Cancer Dataset
-| Patient_ID | Country    | Age    | Gender    | Cancer_Stage    | Tumor_Size_mm    | Family_History    | Smoking_History    | Alcohol_Consumption    |
-| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | UK   | 77   | M   | Localized   | 69   | No   | No   | Yes   |
-| 2 | Japan   | 59   | M   | Localized   | 33   | No   | Yes   | No   |
-| 3 | USA   | 66   | F   | Regional   | 17   | No   | No   | No   |
-| 4 | Japan   | 83   | F   | Metastatic   | 14   | No   | Yes   | No   |
-| 5 | UK   | 66   | M   | Localized   | 34   | Yes   | No   | No   |
-| 6 | France   | 69   | M   | Regional   | 71   | Yes   | No   | Yes   |
+Example Data 1. Colorectal Cancer Dataset.
+| Patient_ID | Country    | Age    | Gender    | Cancer_Stage    | Tumor_Size_mm    | Family_History    | Smoking_History    | Alcohol_Consumption    | ...    |
+| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | UK   | 77   | M   | Localized   | 69   | No   | No   | Yes   | ...   |
+| 2 | Japan   | 59   | M   | Localized   | 33   | No   | Yes   | No   | ...   |
+| 3 | USA   | 66   | F   | Regional   | 17   | No   | No   | No   | ...   |
+| 4 | Japan   | 83   | F   | Metastatic   | 14   | No   | Yes   | No   | ...   |
+| 5 | UK   | 66   | M   | Localized   | 34   | Yes   | No   | No   | ...   |
+| 6 | France   | 69   | M   | Regional   | 71   | Yes   | No   | Yes   | ...   |
 
-Example Data 2. 
+Example Data 2. Cell Viability Absorbance Reading Dataset. (MelastomaW: Melastoma water extract)
+| Treatment | Concentration | Absorbance |
+| :-----: | :---: | :---: |
+| Untreated | 0   | 6271   |
+| Untreated | 0   | 6465   |
+| Untreated | 0   | 6516   |
+| MelastomaW | 200   | 2286   |
+| MelastomaW | 200   | 3364   |
+| MelastomaW | 200   | 2578   |
+| MelastomaW | 150   | 5504   |
+| MelastomaW | 150   | 5632   |
+| MelastomaW | 150   | 6302   |
+| ... | ...   | ...   |
 
 ## Statistical Tests
 0. *Assumption checking tests: Shapiro-Wilk test / Levene's test*
