@@ -17,7 +17,7 @@ Example Data 1. Colorectal Cancer Raw Dataset.
 Example Data 2. Cell Viability Absorbance Reading Raw Dataset. (MelastomaW: Melastoma water extract)
 | Treatment | Concentration | Absorbance |
 | :-----: | :---: | :---: |
-| <sub>Untreated<sub> | 0   | 6271   |
+| <sub>Untreated<sub> | <sub>0<sub>   | <sub>6271<sub>   |
 | Untreated | 0   | 6465   |
 | Untreated | 0   | 6516   |
 | MelastomaW | 200   | 2286   |
