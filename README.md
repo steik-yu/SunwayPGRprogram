@@ -2,12 +2,22 @@
 This page aims to provide read-to-use R program for students who are performing basic biostatistics in R with figures. 
 
 ## Data input format
-To make our life easier onwards, make your data looking great like the format below. It is not as clean as your scientific table with all those redundant information, but R reads better this way. (ps: yes, ofc you can transform the data yourself in R, but it will become complicated here if we introduce that here, so)
+To make your life easier moving forward, format your data like the example below. It might not be as clean as the scientific table with all the redundant information, but R reads it better this way (better if replace space with _). (P.S. Yes, of course you can transform the data yourself in R, but introducing that here would make things more complicated, so)
 
 Example Data 1. Colorectal Cancer Dataset
-| Attempt | #1    | #2    |
-| :-----: | :---: | :---: |
-| Seconds | 301   | 283   |
+| Patient_ID | Country    | Age    | Gender    | Cancer_Stage    | Tumor_Size_mm    | Family_History    | Smoking_History    | Alcohol_Consumption    |
+| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | UK   | 77   | M   | Localized   | 69   | No   | No   | Yes   |
+| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 2 | Japan   | 59   | M   | Localized   | 33   | No   | Yes   | No   |
+| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 3 | USA   | 66   | F   | Regional   | 17   | No   | No   | No   |
+| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 4 | Japan   | 83   | F   | Metastatic   | 14   | No   | Yes   | No   |
+| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 5 | UK   | 66   | M   | Localized   | 34   | Yes   | No   | No   |
+| :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 6 | France   | 69   | M   | Regional   | 71   | Yes   | No   | Yes   |
 
 Example Data 2. 
 
