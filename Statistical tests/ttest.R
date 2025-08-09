@@ -15,7 +15,7 @@ check_and_install <- function(pkg) {
 invisible(sapply(packages_needed, check_and_install))
 invisible(lapply(packages_needed, library, character.only = TRUE))
 
-### ----- IMPORT data function -----
+### ----- create IMPORT data function -----
 
 ImportData <- function() {
   file_path <- file.choose()
@@ -377,6 +377,7 @@ data <- ImportData()
 perform_normality_tests(data)
 
 perform_levene_test(data)
+
 
 
 
