@@ -13,6 +13,7 @@ To make your life easier moving forward, format your data like the example below
 | 4 | Japan   | 83   | F   | Metastatic   | 14   | No   | Yes   | No   | ...   |
 | 5 | UK   | 66   | M   | Localized   | 34   | Yes   | No   | No   | ...   |
 | 6 | France   | 69   | M   | Regional   | 71   | Yes   | No   | Yes   | ...   |
+| ... | ...   | ...   | ...   | ...   | ...   | ...   | ...   | ...   | ...   | 
 
 **Example Data 2.** Cell Viability Absorbance Reading Raw Dataset. (MelastomaW: Melastoma water extract)
 | Treatment | Concentration | Absorbance |
