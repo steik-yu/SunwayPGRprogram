@@ -36,7 +36,7 @@ To make your life easier moving forward, format your data like the example below
 3. Paired samples t-test / Paired sample Wilcoxon rank sum test
 4. One-way ANOVA with post-hoc test / Kruskal-Wallis rank sum test
 5. Two-way ANOVA with post-hoc test / Aligned Rank Transform test
-6. Chi-Square Goodness-of-Fit Test
+6. Chi-Square Goodness-of-Fit Test / Test of Independence
 7. Pearson correlation coefficient / Spearman rank correlation coefficient
 8. Simple linear regression
 9. Multiple linear regression
