@@ -42,16 +42,16 @@ To make your life easier moving forward, format your data like the example below
 
 ## R graphs or formula for the moment
 ### Antioxidant assays (DPPH/ABTS)
-- Line graph of % Radical Scavenging Activity over Concentration (same unit across samples and positive control)
-- Line graph of % Radical Scavenging Activity over Concentration (different unit across samples and positive control)
-- Linear model for EC50
-- Bar chart of EC50 over Assays
+1. Line graph of % Radical Scavenging Activity over Concentration (same unit across samples and positive control)
+2. Line graph of % Radical Scavenging Activity over Concentration (different unit across samples and positive control)
+3. Linear model for EC50
+4. Bar chart of EC50 over Assays
 
 ### Phytochemical content (TPC/TFC)
-- Bar chart of Total Phenolic/Flavonoid Content over Treatments
+1. Bar chart of Total Phenolic/Flavonoid Content over Treatments
 
 ### Cell viability assay (Cell-Titer Blue®)
-- Line graph of % Cell Viability over Concentration
-- Bar chart of % Cell Viability over Concentration (with + and - controls) for one treatment
-- Bar chart of % Cell Viability over Concentration (with + and - controls) for all treatments
-- Linear model for IC50
+1. Line graph of % Cell Viability over Concentration
+2. Bar chart of % Cell Viability over Concentration (with + and - controls) for one treatment
+3. Bar chart of % Cell Viability over Concentration (with + and - controls) for all treatments
+4. Linear model for IC50
