@@ -38,9 +38,7 @@ To make your life easier moving forward, format your data like the example below
 5. Two-way ANOVA with post-hoc test / Aligned Rank Transform test
 6. Chi-Square Goodness-of-Fit Test / Test of Independence
 7. Pearson correlation coefficient / Spearman rank correlation coefficient
-8. Simple linear regression
-9. Multiple linear regression
-10. Logistic regression
+8. Simple linear / Multiple linear regression / Logistic regression
 
 ## R graphs or formula for the moment
 ### Antioxidant assays (DPPH/ABTS)
