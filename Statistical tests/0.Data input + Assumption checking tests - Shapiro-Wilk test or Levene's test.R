@@ -73,7 +73,7 @@ perform_normality_tests <- function(data) {
   
   # Show column mapping
   cat("Column Number Mapping:\n")
-  col_names <- names(data)
+  col_names <- names(as.data.frame(data))
   for (i in seq_along(col_names)) {
     cat(sprintf("%s: %d,\n", col_names[i], i))
   }
@@ -377,6 +377,7 @@ data <- ImportData()
 perform_normality_tests(data)
 
 perform_levene_test(data)
+
 
 
 
