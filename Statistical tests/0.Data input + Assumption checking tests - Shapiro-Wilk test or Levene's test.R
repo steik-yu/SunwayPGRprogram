@@ -110,33 +110,44 @@ perform_normality_tests <- function(data) {
       
       clean_data <- na.omit(data[[col]])
       n <- length(clean_data)
+      uniq <- length(unique(clean_data))
+      
+      # Default
+      status <- NULL
+      p_val <- NA
       
       if (n < 3) {
-        results[[col]] <- list(status = "Insufficient data (n<3)", p_value = NA)
+        status <- "Insufficient data (n<3)"
+      } else if (n > 5000) {
+        status <- "Too many observations (n>5000) - skipped Shapiro"
+      } else if (uniq < 2) {
+        status <- "Identical values - skipped Shapiro"
       } else {
         test_result <- shapiro.test(clean_data)
-        status <- ifelse(test_result$p.value > 0.05, "Normal", "Not normal")
-        results[[col]] <- list(status = status, p_value = test_result$p.value)
-        
-        # Create diagnostic plots
-        p1 <- ggplot(data.frame(x = clean_data), aes(sample = x)) +
-          stat_qq() + 
-          stat_qq_line() +
-          labs(title = paste("QQ-Plot:", col),
-               subtitle = paste("Shapiro-Wilk p =", round(test_result$p.value, 4)),
-               x = "Theoretical Quantiles", y = "Sample Quantiles")
-        
-        p2 <- ggplot(data.frame(x = clean_data), aes(x)) +
-          geom_histogram(aes(y = ..density..), bins = 30, fill = "skyblue", color = "black") +
-          geom_density(color = "red", linewidth = 1) +
-          labs(title = paste("Distribution:", col),
-               x = col, y = "Density")
-        
-        plots[[col]] <- list(QQ = p1, Histogram = p2)
+        p_val <- test_result$p.value
+        status <- ifelse(p_val > 0.05, "Normal", "Not normal")
       }
+      
+      results[[col]] <- list(status = status, p_value = p_val)
+      
+      # Always make plots for numeric columns
+      p1 <- ggplot(data.frame(x = clean_data), aes(sample = x)) +
+        stat_qq() + 
+        stat_qq_line() +
+        labs(title = paste("QQ-Plot:", col),
+             subtitle = ifelse(is.na(p_val), status, paste("Shapiro-Wilk p =", round(p_val, 4))),
+             x = "Theoretical Quantiles", y = "Sample Quantiles")
+      
+      p2 <- ggplot(data.frame(x = clean_data), aes(x)) +
+        geom_histogram(aes(y = ..density..), bins = 30, fill = "skyblue", color = "black") +
+        geom_density(color = "red", linewidth = 1) +
+        labs(title = paste("Distribution:", col),
+             x = col, y = "Density")
+      
+      plots[[col]] <- list(QQ = p1, Histogram = p2)
     }
     
-    # Print results with p-values
+    # Print results
     cat("\nNormality Test Results (Overall):\n")
     for (col in target_cols) {
       res <- results[[col]]
@@ -160,19 +171,17 @@ perform_normality_tests <- function(data) {
     return(invisible(list(results = results, plots = plots)))
   }
   
-  # Validate group indices
+  # Grouped analysis
   invalid_groups <- group_indices[!group_indices %in% seq_along(col_names)]
   if (length(invalid_groups) > 0) {
     stop("Invalid grouping column numbers: ", paste(invalid_groups, collapse = ", "))
   }
   group_cols <- col_names[group_indices]
   
-  # Create combined grouping variable
   group_var_name <- paste(group_cols, collapse = "_")
   data <- data %>%
     tidyr::unite(!!group_var_name, all_of(group_cols), sep = " | ", remove = FALSE)
   
-  # Perform group-wise tests for each target
   all_results <- list()
   all_plots <- list()
   
@@ -186,7 +195,6 @@ perform_normality_tests <- function(data) {
       next
     }
     
-    # Prepare data without NAs
     plot_data <- data %>%
       drop_na(!!sym(group_var_name), !!sym(target_col))
     
@@ -194,11 +202,16 @@ perform_normality_tests <- function(data) {
       dplyr::group_by(!!sym(group_var_name)) %>%
       dplyr::summarize(
         n = sum(!is.na(!!sym(target_col))),
-        p_value = ifelse(n >= 3, 
-                         shapiro.test(!!sym(target_col))$p.value, 
-                         NA_real_),
+        uniq = length(unique(na.omit(!!sym(target_col)))),
+        p_value = ifelse(
+          n < 3 | n > 5000 | uniq < 2,
+          NA_real_,
+          shapiro.test(!!sym(target_col))$p.value
+        ),
         status = dplyr::case_when(
           n < 3 ~ "Insufficient data (n<3)",
+          n > 5000 ~ "Too many observations (n>5000) - skipped Shapiro",
+          uniq < 2 ~ "Identical values - skipped Shapiro",
           is.na(p_value) ~ "Test failed",
           p_value > 0.05 ~ "Normal",
           TRUE ~ "Not normal"
@@ -210,17 +223,14 @@ perform_normality_tests <- function(data) {
     
     all_results[[target_col]] <- group_results
     
-    # Create diagnostic plots
+    # Always make plots
     if (nrow(plot_data) > 0) {
-      # QQ-plot by group
       qq_plot <- ggplot(plot_data, aes(sample = !!sym(target_col))) +
         stat_qq() + 
         stat_qq_line() +
         facet_wrap(as.formula(paste("~", group_var_name)), scales = "free") +
-        labs(title = paste("QQ-Plot by Group:", target_col),
-             x = "Theoretical Quantiles", y = "Sample Quantiles")
+        labs(title = paste("QQ-Plot by Group:", target_col))
       
-      # Boxplot by group
       box_plot <- ggplot(plot_data, aes(x = !!sym(group_var_name), y = !!sym(target_col))) +
         geom_boxplot(fill = "lightgreen") +
         labs(title = paste("Distribution by Group:", target_col),
@@ -231,18 +241,14 @@ perform_normality_tests <- function(data) {
     }
   }
   
-  # Print results with p-values
+  # Print grouped results
   cat("\n\n=== GROUP-WISE NORMALITY RESULTS ===\n")
   for (target in target_cols) {
     cat("\nVariable:", target, "\n")
     df <- all_results[[target]]
-    
-    # Format p-values for display
     df$Display <- ifelse(is.na(df$p_Value),
                          df$Status,
                          sprintf("%s (p = %.4f)", df$Status, df$p_Value))
-    
-    # Print formatted results
     print(df[c("Group", "Display")], row.names = FALSE, col.names = c("Group", "Result"))
     cat("\n")
   }
@@ -378,6 +384,7 @@ data <- ImportData()
 perform_normality_tests(data)
 
 perform_levene_test(data)
+
 
 
 
