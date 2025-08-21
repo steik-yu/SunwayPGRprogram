@@ -4,6 +4,8 @@ This page aims to provide read-to-use R program for students who are performing 
 ## Data input format
 To make your life easier moving forward, format your data like the example below. It might not be as clean as the scientific table with all the redundant information, but R reads it better this way (better if replace space with _). (P.S. Yes, of course you can transform the data yourself in R, but introducing that here would make things more complicated, so). Any problem encountered or advice needed, please send to 20024444su@gmail.com.
 
+**TIPS:** When naming columns, avoid spaces, special symbols (Δ, %, -, +), or starting with numbers. Use only letters, numbers, and underscores. For example: use perc_RSA instead of %RSA.
+
 **Example Data 1.** Colorectal Cancer Patient Raw Dataset.
 | Patient_ID | Country    | Age    | Gender    | Cancer_Stage    | Tumor_Size_mm    | Family_History    | Smoking_History    | Alcohol_Consumption    | ...    |
 | :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
