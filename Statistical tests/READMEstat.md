@@ -38,4 +38,12 @@ Below is an illustration of how to:
 <img src="https://github.com/user-attachments/assets/b40ae5ba-b549-4d8f-86c5-1676a47ca8b2" width="400"/>
 <img src="https://github.com/user-attachments/assets/6456bc4c-6800-4637-b5db-7e12e911f51f" width="400"/>
 </p>
+<br><br>
 
+**3.1 Run *perform_levene_test(data)*, note that only one target variable is tested across multiple grouping variables**
+
+<img width="621" height="390" alt="image" src="https://github.com/user-attachments/assets/19427a23-1b5d-455a-b3fe-d088db7661b0" />
+<br><br>
+
+<img width="628" height="406" alt="image" src="https://github.com/user-attachments/assets/66070757-acae-42d3-a00c-e405708ffc38" />
+<br><br>
