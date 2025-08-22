@@ -31,7 +31,7 @@ To make your life easier moving forward, format your data like the example below
 | MelastomaW | 150   | 6302   |
 | ... | ...   | ...   |
 
-## Statistical Tests
+## Statistical Tests ([demonstrating click here](Statistical%20tests/READMEstat.md))
 0. *Data input + Assumption checking tests: Shapiro-Wilk test / Levene's test*
 1. One sample t-test / One sample Wilcoxon rank sum test
 2. Independent two sample t-test / Mann-Whitney U test
