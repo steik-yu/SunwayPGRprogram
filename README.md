@@ -48,6 +48,18 @@ To make your life easier moving forward, format your data like the example below
 2. Line graph of % Radical Scavenging Activity over Concentration (different unit across samples and positive control)
 3. Bar chart of EC50 over Assays
 
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/17fdc024-4002-4189-8f5d-6b322ff9a48a" width="400" />
+  <img src="https://github.com/user-attachments/assets/c281dd80-4909-4b06-97fc-2847bc69f19c" width="400" />
+</p>
+
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/cd2f1739-77e4-4a09-8a28-0dbd7e590a7b" width="400" />
+</p>
+
+
+
+
 ### Phytochemical content (TPC/TFC)
 1. Bar chart of Total Phenolic/Flavonoid Content over Treatments
 
