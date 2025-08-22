@@ -48,3 +48,25 @@ IC50 <- function(i){
 IC50("MelastomaW") #y = -0.2011x + 99.87, IC50 = 247.9861
 IC50("MelastomaM") #y = -0.0189x + 91.976, IC50 = 2220.9524
 IC50("MelastomaE") #y = -0.209x + 92.402, IC50 = 202.8804
+
+
+# Example for a single treatment
+plot_IC50 <- function(treatment_name) {
+  x <- IC50data %>% filter(Treatment == treatment_name)
+  model <- lm(Mean_CV_P ~ Concentration, data = x)
+  
+  ggplot(x, aes(x = Concentration, y = Mean_CV_P)) +
+    geom_point(size = 3, alpha = 0.7, shape = 18) +
+    geom_smooth(method = "lm", formula = y ~ x, span = 1, alpha = 0.1) + # regression line
+    geom_hline(yintercept = 50, linetype = "dashed", color = "black") +      # IC50 reference line
+    labs(
+      title = paste("Linear Fit for", treatment_name),
+      subtitle = paste0("IC50 ≈ ", round((50 - coef(model)[1]) / coef(model)[2], 2)),
+      x = "Concentration (µg/mL)",
+      y = "Mean % CV"
+    ) +
+    theme_bw()
+}
+
+# Example usage:
+plot_IC50("MelastomaE")
