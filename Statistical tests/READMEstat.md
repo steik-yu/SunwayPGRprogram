@@ -1,4 +1,4 @@
-## A demonstration of Data input, normality test, and variance test
+## A demonstration of data input, normality test, and variance test
 This section shows how to begin with **0. Data input** and proceed with the assumption checks (Shapiro–Wilk test or Levene’s test).
 Please run all functions up to: 
 
