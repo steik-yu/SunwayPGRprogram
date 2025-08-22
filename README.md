@@ -57,14 +57,25 @@ To make your life easier moving forward, format your data like the example below
   <img src="https://github.com/user-attachments/assets/cd2f1739-77e4-4a09-8a28-0dbd7e590a7b" width="400" />
 </p>
 
-
-
-
 ### Phytochemical content (TPC/TFC)
 1. Bar chart of Total Phenolic/Flavonoid Content over Treatments
+
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/b0c4824d-3595-4f98-8876-d25dbb5465d5" width="400" />
+</p>
 
 ### Cell viability assay (Cell-Titer Blue®)
 1. Line graph of % Cell Viability over Concentration
 2. Bar chart of % Cell Viability over Concentration (with + and - controls) for one treatment
 3. Bar chart of % Cell Viability over Concentration (with + and - controls) for all treatments
 4. Linear model for IC50
+
+<p float="left">
+<img src="https://github.com/user-attachments/assets/eae83483-0ef6-4710-bd19-4368d86c15a5" width="400" />
+<img src="https://github.com/user-attachments/assets/2ea9cccc-6432-470e-b264-c69241b3da43" width="400" />
+</p>
+
+<p float="left">
+<img src="https://github.com/user-attachments/assets/f08bb3ad-ffa2-43b7-a14f-58625e40b792" width="400" />
+<img src="https://github.com/user-attachments/assets/966f5a9c-757e-406f-b8b6-786a207fa970" width="400" />
+</p>
