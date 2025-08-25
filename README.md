@@ -43,7 +43,7 @@ To make your life easier moving forward, format your data like the example below
 8. Simple linear / Multiple linear regression / Logistic regression
 
 ## R graphs or formula for the moment
-These are just templates for generating graphs. However, caution is required—for instance, in IC50 models using non-linear regression, it’s important to visually check whether the curve is being fitted properly. Always consult your supervisor or senior colleagues when in doubt. Additionally, while the graphs come with their own palettes, you can override them and use any palette from this website as you prefer. -> [*library("ggsci")*](https://nanx.me/ggsci/articles/ggsci.html#npg)
+These are just templates for generating graphs. However, caution is required—for instance, in IC50 models, here I’m showing the linear regression model, but this should be treated on a case-by-case basis as yours might require different approaches. Always consult your supervisor or senior colleagues when in doubt. Anyways, while the graphs come with their own palettes, you can override them and use any palette from this website as you prefer. -> [*library("ggsci")*](https://nanx.me/ggsci/articles/ggsci.html#npg)
 
 ### Antioxidant assays (DPPH/ABTS)
 1. Line graph of % Radical Scavenging Activity over Concentration (same unit across samples and positive control)
