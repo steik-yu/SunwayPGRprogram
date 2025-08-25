@@ -8,7 +8,7 @@ data <- ImportData()
 
 Then from this point onward, all tests (1–8) will use the data object.
 Below is an illustration of how to:
-1. Import the dataset
+1. Import the dataset *colorectal_cancer_dataset.csv*
 2. Perform the normality test with *perform_normality_tests(data)*
 3. Perform the variance test with *perform_levene_test(data)*
 
